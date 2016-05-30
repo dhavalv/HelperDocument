@@ -1,38 +1,74 @@
-### How to upgrade laravel 4 to latest version(laravel 5.2)?
-
-Reference Link for upgrade laravel
-* [Official Laravel Upgrade 4.2 to 5.0](https://laravel.com/docs/5.0/upgrade)
-* [Awesome Upgrade Guide By Corey McMahon](http://slashnode.com/definitive-laravel-4-to-laravel-5-migration-guide/)
-* [Laravl Custom Validator or Upgrade Custom Validator library to latest laravel version](http://stackoverflow.com/questions/28793716/how-add-custom-validation-rules-when-using-form-request-validation-in-laravel-5)
-* How to Load your custom Lib file into classmap: 
-File composer.json: 
-```
-"autoload": {
-		"classmap": [
-			"database",
-            "app/libs" // Add directory from app, new custom validator file add here.
-		],
-		"psr-4": {
-			"App\\": "app/"
-		}
-},
-```
-After change of composer.json, you need to composer autoload generate again.
-```
-composer dump-autoload
-```
-
-### Laravel Upgrade 5.0 to 5.0.16
-* You need to change composer laravel package version value: 5.0 to 5.0.*
-* In your ```bootstrap/autoload.php``` file, update the ```$compiledPath``` variable to: (Upgrade 5.0 to 5.0.16)
-``` 
-$compiledPath = __DIR__.'/../vendor/compiled.php'; 
-```
-### Laravel Upgrade 5.0.* to 5.1.0
-* [Laravel Documenation](https://laravel.com/docs/5.1/upgrade#upgrade-5.1.0)
-
-### Upgrading To 5.1.11
-* [Upgrading to 5.1.* ](https://laravel.com/docs/5.1/upgrade#upgrade-5.1.11)
- 
-### Upgrading To 5.2.*
-* [Upgrading Document of 5.2.*](https://laravel.com/docs/5.2/upgrade#upgrade-5.2.0)  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laravel Documentation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>How to upgrade laravel 4 to latest version(laravel 5.2)?</h3>
+                    <strong>Reference Link for upgrade laravel</strong>
+                    <ul>
+                        <li><a href="https://laravel.com/docs/5.0/upgrade" target="_blank">Official Laravel Upgrade 4.2 to 5.0</a></li>
+                        <li><a href="http://slashnode.com/definitive-laravel-4-to-laravel-5-migration-guide/">Awesome Upgrade Guide By Corey McMahon</a></li>
+                        <li><a href="http://stackoverflow.com/questions/28793716/how-add-custom-validation-rules-when-using-form-request-validation-in-laravel-5">Laravl Custom Validator or Upgrade Custom Validator library to latest laravel version</a></li>
+                        <li>
+                            <strong>How to Load your custom Lib file into classmap: <br/>File composer.json: </strong>
+                            <code>
+                                "autoload": {
+                                       
+                                        "classmap": [
+                                            "database",
+                                            "app/libs" // Add directory from app, new custom validator file add here.
+                                        ],
+                                        "psr-4": {
+                                            "App\\": "app/"
+                                        }
+                                },
+                            </code>
+                            After change of composer.json, you need to composer autoload generate again.
+                            <code>
+                                composer dump-autoload
+                            </code>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <h3>Laravel Upgrade 5.0 to 5.0.16</h3>
+                    <ul>
+                        <li>You need to change composer laravel package version value: 5.0 to 5.0.*</li>
+                        <li>In your <code>bootstrap/autoload.php</code> file, update the <code>$compiledPath</code> variable to: (Upgrade 5.0 to 5.0.16)</li>
+                        <li>
+                            <code>$compiledPath = __DIR__.'/../vendor/compiled.php'; </code>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <h3>Laravel Upgrade 5.0.* to 5.1.0</h3>
+                    <ul>
+                        <li><a href="https://laravel.com/docs/5.1/upgrade#upgrade-5.1.0">Laravel Documenation</a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <h3>Upgrading To 5.1.11</h3>
+                    <ul>
+                        <li><a href="https://laravel.com/docs/5.1/upgrade#upgrade-5.1.11">Upgrading to 5.1.* </a></li>
+                    </ul>
+                </li>
+                <li class="list-group-item">
+                    <h3>Upgrading Document of 5.2.*</h3>
+                    <ul>
+                        <li><a href="https://laravel.com/docs/5.2/upgrade#upgrade-5.2.0">Upgrading Document of 5.2.*</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>   
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+</body>
+</html>
