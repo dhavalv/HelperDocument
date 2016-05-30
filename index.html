@@ -1,1 +1,38 @@
-Hello World
+### How to upgrade laravel 4 to latest version(laravel 5.2)?
+
+Reference Link for upgrade laravel
+* [Official Laravel Upgrade 4.2 to 5.0](https://laravel.com/docs/5.0/upgrade)
+* [Awesome Upgrade Guide By Corey McMahon](http://slashnode.com/definitive-laravel-4-to-laravel-5-migration-guide/)
+* [Laravl Custom Validator or Upgrade Custom Validator library to latest laravel version](http://stackoverflow.com/questions/28793716/how-add-custom-validation-rules-when-using-form-request-validation-in-laravel-5)
+* How to Load your custom Lib file into classmap: 
+File composer.json: 
+```
+"autoload": {
+		"classmap": [
+			"database",
+            "app/libs" // Add directory from app, new custom validator file add here.
+		],
+		"psr-4": {
+			"App\\": "app/"
+		}
+},
+```
+After change of composer.json, you need to composer autoload generate again.
+```
+composer dump-autoload
+```
+
+### Laravel Upgrade 5.0 to 5.0.16
+* You need to change composer laravel package version value: 5.0 to 5.0.*
+* In your ```bootstrap/autoload.php``` file, update the ```$compiledPath``` variable to: (Upgrade 5.0 to 5.0.16)
+``` 
+$compiledPath = __DIR__.'/../vendor/compiled.php'; 
+```
+### Laravel Upgrade 5.0.* to 5.1.0
+* [Laravel Documenation](https://laravel.com/docs/5.1/upgrade#upgrade-5.1.0)
+
+### Upgrading To 5.1.11
+* [Upgrading to 5.1.* ](https://laravel.com/docs/5.1/upgrade#upgrade-5.1.11)
+ 
+### Upgrading To 5.2.*
+* [Upgrading Document of 5.2.*](https://laravel.com/docs/5.2/upgrade#upgrade-5.2.0)  
